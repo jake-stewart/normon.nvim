@@ -36,10 +36,10 @@ function NormOn(callback, command, opts)
 end
 
 return function(key, command, opts)
-    vim.keymap.set("v", function()
+    vim.keymap.set("v", key, function()
         NormOn(NormOnSelection, command, opts)
     end)
-    vim.keymap.set("n", function()
+    vim.keymap.set("n", key, function()
         NormOn(NormOnWord, command, opts)
     end)
 end

@@ -3,7 +3,7 @@ run normal commands over visual select or cursor word in neovim.
 
 ### Example Config
 ```lua
-local normon = require("normon.nvim")
+local normon = require("normon")
 
 normon("<leader>n", "cgn")
 normon("<leader>N", "cgN")
