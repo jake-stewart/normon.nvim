@@ -13,6 +13,7 @@ function NormOnSelection()
 end
 
 function NormOnWord()
+    vim.cmd.norm("_yiw")
     local word = vim.fn.expand("<cword>")
     local search = "\\C\\V\\<" .. word .. "\\>"
     vim.fn.setreg("/", search)
