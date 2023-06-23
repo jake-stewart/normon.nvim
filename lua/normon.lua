@@ -36,6 +36,7 @@ function NormOn(callback, command, opts)
 end
 
 return function(key, command, opts)
+    if opts == nil then opts = {} end
     vim.keymap.set("v", key, function()
         NormOn(NormOnSelection, command, opts)
     end)
