@@ -1,4 +1,4 @@
-# normon.vim
+# normon.nvim
 run normal commands over visual select or cursor word in neovim.
 
 ### Example Config
