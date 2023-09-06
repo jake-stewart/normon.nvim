@@ -5,8 +5,10 @@ function ExactSearch(query)
 end
 
 function NormOnSelection()
+    local zRegister = vim.fn.getreg("z")
     vim.cmd.norm("\"zy")
     local selection = vim.fn.getreg("z")
+    vim.fn.setreg("z", zRegister)
     local search = ExactSearch(selection)
     vim.fn.setreg("/", search)
     vim.o.hlsearch = true
