@@ -31,10 +31,10 @@ function NormOn(callback, command, opts)
         vim.cmd.let("v:searchforward = 1")
     end
 
-    vim.fn.feedkeys(command)
+    vim.fn.feedkeys(command, "t")
 
     if opts.clearSearch then
-        vim.fn.feedkeys(":echon\n")
+        vim.fn.feedkeys(":echon\n", "t")
     end
 end
 
