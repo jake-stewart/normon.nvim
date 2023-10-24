@@ -6,7 +6,7 @@ end
 
 function NormOnSelection()
     local zRegister = vim.fn.getreg("z")
-    vim.cmd.norm("\"zy")
+    vim.cmd.norm({"\"zy", bang = true})
     local selection = vim.fn.getreg("z")
     vim.fn.setreg("z", zRegister)
     local search = ExactSearch(selection)
@@ -15,7 +15,7 @@ function NormOnSelection()
 end
 
 function NormOnWord()
-    vim.cmd.norm("\"_yiw")
+    vim.cmd.norm({"\"_yiw", bang = true})
     local word = vim.fn.expand("<cword>")
     local search = "\\C\\V\\<" .. word .. "\\>"
     vim.fn.setreg("/", search)
