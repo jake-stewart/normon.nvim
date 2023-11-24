@@ -1,6 +1,8 @@
 # normon.nvim
 run normal commands over visual select or cursor word in neovim.
 
+<a href="https://asciinema.org/a/Hu8ecGOTVMYa5Leogu5yn9XqL" target="_blank"><img src="https://asciinema.org/a/Hu8ecGOTVMYa5Leogu5yn9XqL.svg" /></a>
+
 ### Example Config
 ```lua
 local normon = require("normon")
